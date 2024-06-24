@@ -15,14 +15,14 @@ const Footer = () => {
 
     <View>
         <View style={styles.iconsContainer}>
-          <TouchableOpacity onPress={ () => navigation.navigate ('Settings')} >
+          <TouchableOpacity onPress={ () => navigation.navigate ('Home')} >
            <Image source = {homeIcon} />
           </TouchableOpacity>
 
         <Image source = {myCardsIcon} />
         <Image source = {statisticsIcon} />
         
-        <TouchableOpacity onPress={ () => navigation.navigate ('Home')} >
+        <TouchableOpacity onPress={ () => navigation.navigate ('Settings')} >
            <Image source = {settingsIcon} />
           </TouchableOpacity>
 

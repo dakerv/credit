@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import Footer from '../components/footer';
 
 export default function Settings ({ navigation }) {
@@ -8,8 +8,14 @@ export default function Settings ({ navigation }) {
   
         <Text> Hi </Text>
 
-        <Footer></Footer>
+        <Footer />
   
       </View>
     );
   }
+
+  const styles = StyleSheet.create ({
+    container: {
+      padding: 70
+    }
+  })
