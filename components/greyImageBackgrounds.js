@@ -1,9 +1,13 @@
 import React from "react";
 import { View, StyleSheet, Image } from 'react-native';
+import { useSelector } from "react-redux";
 
 const GreyImageBackgrounds = ({source}) => {
+    
+    const isDarkMode = useSelector(state => state.theme.isDarkMode);
+    
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, isDarkMode? styles.darkContainer : styles.container]}>
             <Image source = {source} 
             style={styles.images} />
         </View>   
@@ -20,8 +24,12 @@ const styles = StyleSheet.create ({
         justifyContent: "center",
     },
 
+    darkContainer: {
+        backgroundColor: "#1F1E2E"
+    },
+
     images: {
-        width: 16,
+        width: 20,
         height: 20
     }
 })
